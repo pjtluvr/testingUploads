@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en-US">
+     <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width" />
+          <title>Happy Anniversary My Love</title> 
+          <style>
+               body { 
+                    background-image: url('images/cozy.avif');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 100vw;
+                    height: 100vh;
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    text-align: center;
+               }
+
+               h1, h2 {
+                    font-family: Arial, sans-serif;
+                    color: white;
+                    margin-bottom: 20px;
+               }
+
+               .doorframe {
+                    display: flex;
+                    perspective: 1200px;
+                    transform-style: preserve-3d;
+                    width: 50vw;  
+                    height: 70vh;
+                    margin: 0 auto;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    z-index: 2;  
+               }
+
+               .door {
+                    flex-grow: 1;
+                    transform-style: preserve-3d;
+                    transform-origin: left center;
+                    transition: all 0.7s ease;  /* Smooth transition */
+                    backface-visibility: hidden;
+                    position: relative;
+                    background-image: url('images/doory.jpg');  /* Door image as background */
+                    background-size: contain;  
+                    background-position: center;  
+                    background-repeat: no-repeat;  
+                    z-index: 2;  
+                    width: 100%;
+                    height: 100%;
+               }
+
+               .door:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    backface-visibility: hidden;
+                    transform-style: preserve-3d;
+                    transform: rotateY(180deg);
+                    background-color: #8B4513;  /* Same brown color for the back of the door */
+               }
+
+               .doorframe:focus .door,
+               .doorframe:hover .door {
+                    transform: rotate3d(0, 1, 0, -130deg);
+                    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3);  /* More depth on hover */
+               }
+
+               .flowers {
+                    position: absolute;  /* Position the flowers behind the door */
+                    top: 50%;  
+                    left: 50%;  
+                    transform: translate(-50%, -50%);  
+                    z-index: 1;  
+                    width: 20%;  
+                    max-width: 70%;  
+               }
+               .flowers a {
+                     display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    z-index: 1;  /* Ensure it's above the door but below the flowers image */
+               }
+
+               img.flower-image {
+                    width: 100%;  /* The flowers image will scale to 100% of the container's width */
+                    height: auto;  
+                    display: block;
+                    margin: 0 auto;
+                    pointer-events: auto;
+               }
+
+          </style>
+     </head>
+     <body>
+          <h1>Happy Anniversary My Love!!!</h1>
+          <h2>I love you!</h2>
+
+          <!-- Doorframe and door HTML -->
+          <div class="doorframe" tabindex="0">
+               <div class="door"></div>
+          </div>
+
+          <!-- Flowers (Behind the door) -->
+          <div class="flowers">
+               <a href="file:///Users/apurvasharma/Documents/html/test-site/apractivity.html" >
+                    <img src="images/wildflowers.gif" alt="A bouquet of wildflowers" class="flower-image">
+               </a>
+
+          </div>
+     </body>
+</html>
+
+
+
+
+   
